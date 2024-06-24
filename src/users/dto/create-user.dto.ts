@@ -1,5 +1,5 @@
 import { Prisma } from "@prisma/client";
-import { IsEmail, IsNotEmpty, IsStrongPassword, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, IsStrongPassword } from "class-validator";
 
 type UserCreateBody = Prisma.UserCreateArgs["data"];
 type Common<T> = Pick<T, keyof T>;
@@ -14,4 +14,4 @@ export class CreateUserDto implements Common<UserCreateBody> {
     password: string;
 
     address?: string;
-};
+}

@@ -1,6 +1,6 @@
 import { Prisma } from "@prisma/client";
 
-export class User implements Prisma.UserGetPayload<{}> {
+export class User implements Prisma.UserGetPayload<unknown> {
     id: string;
     email: string;
     name: string;
